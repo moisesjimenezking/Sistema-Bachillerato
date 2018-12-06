@@ -1,0 +1,309 @@
+{% extends 'html/layouts/default.html' %}
+{% block content %}
+<div class="row">
+	<div class="col-lg-12">
+		<h3 class="page-header">{{object.Cod_Horario}}</h3>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4><span class="fa fa-folder-open-o"></span> Edición</h4>
+			</div>
+			<div class="panel-body">
+				{% if form%}
+				<form method="POST" action="">
+					<div class="form-group row">
+						<label for="ejemplo_email_3" class="col-lg-1 control-label">Seccion</label>
+							<select select="" class="form-control" name="Cod_Horario"><option value="{{form.Cod_Horario}}"></option></select>
+					</div>
+				{% csrf_token %}			
+				<!--<div class="form-group row">
+					<label for="ejemplo_email_3" class="col-lg-1 control-label">Seccion</label>
+					<div>
+						<select select="" class="form-control" name="Cod_Horario">
+						<option value="{{form.Cod_Horario}}"></option></select>
+					</div>-->
+				<table width="100%" class="table table-striped table-bordered table-hover" id="">
+					<thead>
+						<tr>
+							<th>Horas</th>
+							<th>Lunes</th>
+							<th>Martes</th>
+							<th>Miercoles</th>
+							<th>Jueves</th>
+							<th>Viernes</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="odd gradeX">
+							<td>7:10--AM--7:55</td>
+							<td>
+								<select select="" class="form-control" name="B1_Lunes">
+								<option value="{{form.B1_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B1_Martes">
+								<option value="{{form.B1_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B1_Miercoles">
+								<option value="{{form.B1_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B1_Jueves">
+								<option value="{{form.B1_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B1_Viernes">
+								<option value="{{form.B1_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>8:00--AM--8:45</td>
+							<td>
+								<select select="" class="form-control" name="B2_Lunes">
+								<option value="{{form.B2_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B2_Martes">
+								<option value="{{form.B2_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B2_Miercoles">
+								<option value="{{form.B2_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B2_Jueves">
+								<option value="{{form.B2_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B2_Viernes">
+								<option value="{{form.B2_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>8:50--AM--9:35</td>
+							<td>
+								<select select="" class="form-control" name="B3_Lunes">
+								<option value="{{form.B3_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B3_Martes">
+								<option value="{{form.B3_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B3_Miercoles">
+								<option value="{{form.B3_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B3_Jueves">
+								<option value="{{form.B3_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B3_Viernes">
+								<option value="{{form.B3_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>9:40--AM--10:25</td>
+							<td>
+								<select select="" class="form-control" name="B4_Lunes">
+								<option value="{{form.B4_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B4_Martes">
+								<option value="{{form.B4_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B4_Miercoles">
+								<option value="{{form.B4_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B4_Jueves">
+								<option value="{{form.B4_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B4_Viernes">
+								<option value="{{form.B4_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>10:30--AM-11:15</td>
+							<td>
+								<select select="" class="form-control" name="B5_Lunes">
+								<option value="{{form.B5_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B5_Martes">
+								<option value="{{form.B5_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B5_Miercoles">
+								<option value="{{form.B5_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B5_Jueves">
+								<option value="{{form.B5_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B5_Viernes">
+								<option value="{{form.B5_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>11:20--AM--12:05</td>
+							<td>
+								<select select="" class="form-control" name="B6_Lunes">
+								<option value="{{form.B6_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B6_Martes">
+								<option value="{{form.B6_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B6_Miercoles">
+								<option value="{{form.B6_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B6_Jueves">
+								<option value="{{form.B6_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B6_Viernes">
+								<option value="{{form.B6_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>1:05--PM--1:50</td>
+							<td>
+								<select select="" class="form-control" name="B7_Lunes">
+								<option value="{{form.B7_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B7_Martes">
+								<option value="{{form.B7_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B7_Miercoles">
+								<option value="{{form.B7_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B7_Jueves">
+								<option value="{{form.B7_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B7_Viernes">
+								<option value="{{form.B7_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>1:55--PM--2:40</td>
+							<td>
+								<select select="" class="form-control" name="B8_Lunes">
+								<option value="{{form.B8_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B8_Martes">
+								<option value="{{form.B8_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B8_Miercoles">
+								<option value="{{form.B8_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B8_Jueves">
+								<option value="{{form.B8_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B8_Viernes">
+								<option value="{{form.B8_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>2:45--PM--3:30</td>
+							<td>
+								<select select="" class="form-control" name="B9_Lunes">
+								<option value="{{form.B9_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B9_Martes">
+								<option value="{{form.B9_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B9_Miercoles">
+								<option value="{{form.B9_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B9_Jueves">
+								<option value="{{form.B9_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B9_Viernes">
+								<option value="{{form.B9_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>3:35--PM--4:20</td>
+							<td>
+								<select select="" class="form-control" name="B10_Lunes">
+								<option value="{{form.B10_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B10_Martes">
+								<option value="{{form.B10_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B10_Miercoles">
+								<option value="{{form.B10_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B10_Jueves">
+								<option value="{{form.B10_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B10_Viernes">
+								<option value="{{form.B10_Viernes}}"></option></select>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>4:30--PM--5:10</td>
+							<td>
+								<select select="" class="form-control" name="B11_Lunes">
+								<option value="{{form.B11_Lunes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B11_Martes">
+								<option value="{{form.B11_Martes}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B11_Miercoles">
+								<option value="{{form.B11_Miercoles}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B11_Jueves">
+								<option value="{{form.B11_Jueves}}"></option></select>
+							</td>
+							<td>
+								<select select="" class="form-control" name="B11_Viernes">
+								<option value="{{form.B11_Viernes}}"></option></select>
+							</td>
+						</tr>
+						</form>
+						{% else %}
+						<p>No found</p>
+						{% endif %} 
+                    </tbody>
+                </table>
+                <input type="submit" value="Registrar" class="btn btn-primary" />
+                <td><a href="/list_horarios">Volver</td>
+            </div>
+                        <!-- /.panel-body -->
+        </div>
+                    <!-- /.panel -->
+    </div>
+                <!-- /.col-lg-12 -->
+</div>
+{% endblock %}

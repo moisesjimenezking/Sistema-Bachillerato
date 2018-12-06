@@ -1,0 +1,75 @@
+{% extends 'html/layouts/default.html' %}
+{% block content %}
+<div class="row">
+	<div class="col-lg-12">
+		<h3> {{ object.Nombre }}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4>
+					<span class="fa fa-folder-open-o"></span> Actualizar
+				</h4>
+			</div>
+			<div class="panel-body">
+			{% if form%}
+			<form method="POST" action="">
+			{% csrf_token %}
+			  <div class="form-group row">
+			    <label for="ejemplo_email_3" class="col-lg-1 control-label">Nombre</label>
+			    <div class="col-lg-4">
+			      <input type="text" class="form-control" id="ejemplo_email_3" name="Nombre" value="{{object.Nombre}}">
+			    </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="ejemplo_email_3" class="col-lg-1 control-label">Apellidos</label>
+			    <div class="col-lg-4">
+			      <input type="text" class="form-control" id="ejemplo_email_3" name="Apellido" value="{{object.Apellido}}">
+			    </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="ejemplo_email_3" class="col-lg-1 control-label">Cédula</label>
+			    <div class="col-lg-4">
+			      <input type="number" class="form-control" id="ejemplo_email_3" name="CI" value="{{object.CI}}">
+			    </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="ejemplo_email_3" class="col-lg-1 control-label">Correo Electrónico</label>
+			    <div class="col-lg-4">
+			      <input type="email" class="form-control" id="ejemplo_email_3" name="Email" value="{{object.Email}}">
+			    </div>
+			  </div>
+			  <div class="form-group row">
+			    <label for="ejemplo_email_3" class="col-lg-1 control-label">Titulo</label>
+			    <div class="col-lg-4">
+			      <input type="text" class="form-control" id="ejemplo_email_3" name="Titulo_Profesion" value="{{object.Titulo_Profesion}}">
+			    </div>
+			  </div>
+			  	<div class="form-group row">
+			  		<label for="ejemplo_email_3" class="col-lg-1 control-label">Materias</label>
+					<select multiple="" class="form-control" name="Materias_Imparte">
+						<option value="{{form.Materias_Imparte}}">
+							{{Materias_Imparte}}
+						</option>
+					</select>
+				</div>			
+			<input type="submit" value="Registrar" class="btn btn-primary" />
+			<td><a href="/list_profesores">Volver</td>
+			</form>
+			{% else %}
+			<a href="RegistroProfesor">Registrar otro Profesores</a>
+			{% endif %}
+			</div>
+		</div>			
+	</div>
+</div>
+
+{% endblock %}
+<!--
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update">
+</form-->

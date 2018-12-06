@@ -1,0 +1,17 @@
+{% extends 'html/layouts/default.html' %}
+{% block  content %}
+<form method="post">
+	{% csrf_token %}
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<span class="fa fa-folder-o fa-fw"></span> ¿Estás seguro de borrar el Horario perteneciente a la seccion {{object.Cod_Horario}}?
+		</div>
+		<div class="panel-body">
+			<button class="btn btn-primary btn-lg">
+				Sí
+			</button>
+			<a href="/list_horarios">Volver</a>
+		</div>
+	</div>
+</form>
+{% endblock %}
